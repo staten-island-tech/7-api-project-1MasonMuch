@@ -4,11 +4,13 @@ from tkinter import ttk  # ttk provides modern, themed widgets
 root = Tk()
 
 def myclick():
-    mylabel3 = Label(root, text = "I pressed a button")
+    mylabel3 = Label(root, text = f"Hello {e.get()} ")
     mylabel3.grid(row = 3, column = 2)
 
-e = Entry(root)
+e = Entry(root, width = 20, borderwidth = 3)
 e.grid(row = 2, column = 1)
+e.insert(0, "Enter Your name:")
+
 
 myLabel1 = Label(root, text = "Helllo World!")
 myLabel1.grid(row = 0, column = 0)
@@ -19,7 +21,7 @@ myLabel2.grid(row = 1, column = 1)
 
 
 
-mybutton = Button(root, text = "Click me!", padx=10, pady=10, command = myclick, fg = "white", bg = "black")
+mybutton = Button(root, text = "Enter your name!", padx=10, pady=10, command = myclick, fg = "white", bg = "black")
 mybutton.grid(row = 2 , column = 2)
 
 
